@@ -92,15 +92,17 @@ class Todo
     $stmt->bindValue('id', $id, \PDO::PARAM_INT);
     $stmt->execute();
   }
-
+  
   private function purge()
   {
     $this->pdo->query("DELETE FROM todos WHERE is_done = 1");
   }
-
-  public function getAll()
+  
+  public function getAll($category)
   {
-    $stmt = $this->pdo->query("SELECT * FROM todos ORDER BY id DESC");
+    $stmt = $this->pdo->prepare("SELECT * FROM todos WHERE category = :category ORDER BY id DESC");
+    $stmt->bindValue('category', $category, \PDO::PARAM_INT);
+    $stmt->execute();
     $todos = $stmt->fetchAll();
     return $todos;
   }

@@ -10,7 +10,7 @@ $pdo = Database::getInstance();
 
 $todo = new Todo($pdo);
 $todo->processPost();
-$todos = $todo->getAll();
+$todos = $todo->getAll("study");
 
 ?>
 
@@ -23,7 +23,7 @@ $todos = $todo->getAll();
 </head>
 
 <body id = "Todos_main">
-  
+
   <main data-token="<?= Utils::h($_SESSION['token']); ?>">
     <header>
       <h1>Todos</h1>
