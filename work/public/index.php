@@ -23,6 +23,7 @@ $todos = $todo->getAll();
 </head>
 
 <body id = "Todos_main">
+  
   <main data-token="<?= Utils::h($_SESSION['token']); ?>">
     <header>
       <h1>Todos</h1>
@@ -45,5 +46,6 @@ $todos = $todo->getAll();
   </main>
 
   <script src="js/main.js"></script>
+
 </body>
 </html>

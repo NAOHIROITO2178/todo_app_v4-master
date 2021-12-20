@@ -78,6 +78,7 @@
     fetch('?action=add', {
       method: 'POST',
       body: new URLSearchParams({
+        category: 'study',
         title: title,
         token: token,
       }),
