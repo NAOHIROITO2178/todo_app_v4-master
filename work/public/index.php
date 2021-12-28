@@ -52,7 +52,7 @@ $todos_event = $todo->getAll("event");
   </main>
   </div>
 
-    <!-- 部活動
+     <!--部活動 -->
     <div class = "club_div">
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header>
@@ -76,7 +76,7 @@ $todos_event = $todo->getAll("event");
         </main>
       </div>
 
-    <!-- 友達関係 -->
+     <!--友達関係 -->
     <main data-token="<?= Utils::h($_SESSION['token']); ?>">
     <header>
       <h1>友達関係</h1>
