@@ -1,5 +1,4 @@
-
-.Todos_main {
+body {
   font-family: Arial, sans-serif;
 }
 
@@ -52,4 +51,21 @@ input[type="checkbox"] {
   font-size: 14px;
   margin-left: auto;
   padding-left: 8px;
+}
+
+.time_zone{
+  text-align: center;
+}
+
+.six_Todos{
+ display: flex;
+}
+
+.six_Todos> div{
+  width:50%;
+}
+
+.six_Todos,.six_Todos>div{
+border: 1px solid #999;
+padding: 10px;
 }

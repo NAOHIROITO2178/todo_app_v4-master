@@ -45,15 +45,13 @@ class Todo
 
   private function add()
   {
-    $category = trim(filter_input(INPUT_POST, 'category'));
     $title = trim(filter_input(INPUT_POST, 'title'));
     if ($title === '') {
       return;
     }
   
-    $stmt = $this->pdo->prepare("INSERT INTO todos (title,category) VALUES (:title,:category)");
+    $stmt = $this->pdo->prepare("INSERT INTO todos (title) VALUES (:title)");
     $stmt->bindValue('title', $title, \PDO::PARAM_STR);
-    $stmt->bindValue('category', $category, \PDO::PARAM_STR);
     $stmt->execute();
     return (int) $this->pdo->lastInsertId();
   }
@@ -92,17 +90,15 @@ class Todo
     $stmt->bindValue('id', $id, \PDO::PARAM_INT);
     $stmt->execute();
   }
-  
+
   private function purge()
   {
     $this->pdo->query("DELETE FROM todos WHERE is_done = 1");
   }
-  
-  public function getAll($category)
+
+  public function getAll()
   {
-    $stmt = $this->pdo->prepare("SELECT * FROM todos WHERE category = :category ORDER BY id DESC");
-    $stmt->bindValue('category', $category, \PDO::PARAM_INT);
-    $stmt->execute();
+    $stmt = $this->pdo->query("SELECT * FROM todos ORDER BY id DESC");
     $todos = $stmt->fetchAll();
     return $todos;
   }

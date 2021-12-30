@@ -10,15 +10,9 @@ $pdo = Database::getInstance();
 
 $todo = new Todo($pdo);
 $todo->processPost();
-$todos_study = $todo->getAll("study");
-$todos_club = $todo->getAll("club");
-$todos_friend = $todo->getAll("friend");
-$todos_love = $todo->getAll("love");
-$todos_course = $todo->getAll("course");
-$todos_event = $todo->getAll("event");
+$todos = $todo->getAll();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -26,25 +20,66 @@ $todos_event = $todo->getAll("event");
   <title>My Todos</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <!-- 勉強 -->
-  <div class = "study_div">
-    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-      <header>
-        <h1>勉強</h1>
-      <span class="purge">一括削除</span>
+  <div class = "six_Todos">
+  <div>
+  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+    <header>
+      <h1>Todos1</h1>
+      <span class="purge">Purge</span>
     </header>
-    <form name = "study_form">     
-      <input type="text" name="title" placeholder="ここに入力">
-      <button id = "study_btn">追加</button>
+
+    <form>
+      <input type="text" name="title" placeholder="Type new todo.">
     </form>
-    
+
     <ul>
-      <?php foreach ($todos_study as $todo): ?>
-        <li data-id="<?= Utils::h($todo->id); ?>">
-          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-          <span><?= Utils::h($todo->title); ?></span>
+      <?php foreach ($todos as $todo): ?>
+      <li data-id="<?= Utils::h($todo->id); ?>">
+        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+        <span><?= Utils::h($todo->title); ?></span>
+        <span class="delete">x</span>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+  </main>
+
+  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+    <header>
+      <h1>Todos2</h1>
+      <span class="purge">Purge</span>
+    </header>
+
+    <form>
+      <input type="text" name="title" placeholder="Type new todo.">
+    </form>
+
+    <ul>
+      <?php foreach ($todos as $todo): ?>
+      <li data-id="<?= Utils::h($todo->id); ?>">
+        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+        <span><?= Utils::h($todo->title); ?></span>
+        <span class="delete">x</span>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+  </main>
+
+  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+    <header>
+      <h1>Todos3</h1>
+      <span class="purge">Purge</span>
+    </header>
+
+    <form>
+      <input type="text" name="title" placeholder="Type new todo.">
+    </form>
+
+    <ul>
+      <?php foreach ($todos as $todo): ?>
+      <li data-id="<?= Utils::h($todo->id); ?>">
+        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+        <span><?= Utils::h($todo->title); ?></span>
         <span class="delete">x</span>
       </li>
       <?php endforeach; ?>
@@ -52,120 +87,79 @@ $todos_event = $todo->getAll("event");
   </main>
   </div>
 
-     <!--部活動 -->
-    <div class = "club_div">
-      <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
-          <h1>部活動</h1>
-          <span class="purge">一括削除</span>
-        </header>
-        <form name = "club_form">
-          <input type="text" name="title" placeholder="ここに入力">
-          <button id = "club_btn">追加</button>
-        </form>
-        
-        <ul>
-          <?php foreach ($todos_club as $todo): ?>
-            <li data-id="<?= Utils::h($todo->id); ?>">
-              <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-              <span><?= Utils::h($todo->title); ?></span>
-              <span class="delete">x</span>
-            </li>
-            <?php endforeach; ?>
-          </ul> 
-        </main>
-      </div>
-
-     <!--友達関係 -->
-    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+  <div>
+  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
     <header>
-      <h1>友達関係</h1>
-      <span class="purge">一括削除</span>
+      <h1>Todos4</h1>
+      <span class="purge">Purge</span>
     </header>
-    <form name = "friend_form">
-      <input type="text" name="title" placeholder="ここに入力">
-      <button id = "friend_btn">追加</button>
+
+    <form>
+      <input type="text" name="title" placeholder="Type new todo.">
     </form>
 
     <ul>
-      <?php foreach ($todos_friend as $todo): ?>
+      <?php foreach ($todos as $todo): ?>
       <li data-id="<?= Utils::h($todo->id); ?>">
         <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
         <span><?= Utils::h($todo->title); ?></span>
         <span class="delete">x</span>
       </li>
       <?php endforeach; ?>
-    </ul> 
-    </main>
+    </ul>
+  </main>
 
-    <!-- 恋愛 -->
-    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
     <header>
-      <h1>恋愛</h1>
-      <span class="purge">一括削除</span>
+      <h1>Todos5</h1>
+      <span class="purge">Purge</span>
     </header>
-    <form name = "love_form">
-      <input type="text" name="title" placeholder="ここに入力">
-      <button id = "love_btn">追加</button>
+
+    <form>
+      <input type="text" name="title" placeholder="Type new todo.">
     </form>
 
     <ul>
-      <?php foreach ($todos_love as $todo): ?>
+      <?php foreach ($todos as $todo): ?>
       <li data-id="<?= Utils::h($todo->id); ?>">
         <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
         <span><?= Utils::h($todo->title); ?></span>
         <span class="delete">x</span>
       </li>
       <?php endforeach; ?>
-    </ul> 
-    </main>
+    </ul>
+  </main>
 
-    <!-- 進路 -->
-    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
     <header>
-      <h1>進路</h1>
-      <span class="purge">一括削除</span>
+      <h1>Todos6</h1>
+      <span class="purge">Purge</span>
     </header>
-    <form name = "course_form">
-      <input type="text" name="title" placeholder="ここに入力">
-      <button id = "course_btn">追加</button>
+
+    <form>
+      <input type="text" name="title" placeholder="Type new todo.">
     </form>
 
     <ul>
-      <?php foreach ($todos_course as $todo): ?>
+      <?php foreach ($todos as $todo): ?>
       <li data-id="<?= Utils::h($todo->id); ?>">
         <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
         <span><?= Utils::h($todo->title); ?></span>
         <span class="delete">x</span>
       </li>
       <?php endforeach; ?>
-    </ul> 
-    </main>
-
-    <!-- 学校行事 -->
-    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-    <header>
-      <h1>学校行事</h1>
-      <span class="purge">一括削除</span>
-    </header>
-    <form name = "event_form">
-      <input type="text" name="title" placeholder="ここに入力">
-      <button id = "event_btn">追加</button>
-    </form>
-
-    <ul>
-      <?php foreach ($todos_event as $todo): ?>
-      <li data-id="<?= Utils::h($todo->id); ?>">
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-        <span><?= Utils::h($todo->title); ?></span>
-        <span class="delete">x</span>
-      </li>
-      <?php endforeach; ?>
-    </ul> 
-    </main> -->
-
+    </ul>
+  </main>
+  </div>
+  </div>
   <script src="js/main.js">
   </script>
 </body>
-
+<footer id = "Time_zone">
+  <?php
+  date_default_timezone_set('Asia/Tokyo');
+  $date = new DateTime('now');
+  echo $date->format('Y m/d H:i');
+  ?>
+</footer>
 </html>
