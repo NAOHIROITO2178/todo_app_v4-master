@@ -23,14 +23,14 @@ $todos = $todo->getAll();
 <body>
   <div class = "six_Todos">
   <div>
-    <!-- todo1 -->
+    <!-- 勉強 -->
     <main data-token="<?= Utils::h($_SESSION['token']); ?>">
       <header>
-        <h1>Todos1</h1>
+        <h1>勉強</h1>
         <span class="purge">Purge</span>
       </header>
 
-      <form>
+      <form id="form-study">
         <input type="text" name="title" placeholder="Type new todo.">
       </form>
 
@@ -45,14 +45,14 @@ $todos = $todo->getAll();
       </ul>
     </main>
 
-    <!-- todo2 -->
+    <!-- 部活動 -->
     <main data-token="<?= Utils::h($_SESSION['token']); ?>">
       <header>
-        <h1>Todos2</h1>
+        <h1>部活動</h1>
         <span class="purge">Purge</span>
       </header>
 
-      <form>
+      <form id="form-club">
         <input type="text" name="title" placeholder="Type new todo.">
       </form>
 
@@ -67,14 +67,14 @@ $todos = $todo->getAll();
       </ul>
     </main>
 
-    <!-- todo3 -->
+    <!-- 友達 -->
     <main data-token="<?= Utils::h($_SESSION['token']); ?>">
       <header>
-        <h1>Todos3</h1>
+        <h1>友達</h1>
         <span class="purge">Purge</span>
       </header>
 
-      <form>
+      <form id="form-friend">
         <input type="text" name="title" placeholder="Type new todo.">
       </form>
 
@@ -91,14 +91,14 @@ $todos = $todo->getAll();
   </div>
 
   <div>
-  <!-- todo4  -->
+  <!-- 恋愛  -->
     <main data-token="<?= Utils::h($_SESSION['token']); ?>">
       <header>
-        <h1>Todos4</h1>
+        <h1>恋愛</h1>
         <span class="purge">Purge</span>
       </header>
 
-      <form>
+      <form id="form-love">
         <input type="text" name="title" placeholder="Type new todo.">
       </form>
 
@@ -113,14 +113,14 @@ $todos = $todo->getAll();
       </ul>
     </main>
 
-    <!-- todo5  -->
+    <!-- 進路  -->
     <main data-token="<?= Utils::h($_SESSION['token']); ?>">
       <header>
-        <h1>Todos5</h1>
+        <h1>進路</h1>
         <span class="purge">Purge</span>
       </header>
 
-      <form>
+      <form id="form-course">
         <input type="text" name="title" placeholder="Type new todo.">
       </form>
 
@@ -135,14 +135,14 @@ $todos = $todo->getAll();
       </ul>
     </main>
 
-    <!-- todo6  -->
+    <!-- 学校行事  -->
     <main data-token="<?= Utils::h($_SESSION['token']); ?>">
       <header>
-        <h1>Todos6</h1>
+        <h1>学校行事</h1>
         <span class="purge">Purge</span>
       </header>
 
-      <form>
+      <form id="form-event">
         <input type="text" name="title" placeholder="Type new todo.">
       </form>
 

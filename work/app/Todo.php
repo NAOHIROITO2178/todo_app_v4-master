@@ -46,12 +46,15 @@ class Todo
   private function add()
   {
     $title = trim(filter_input(INPUT_POST, 'title'));
+    $category = trim(filter_input(INPUT_POST, 'category'));
+
     if ($title === '') {
       return;
     }
   
-    $stmt = $this->pdo->prepare("INSERT INTO todos (title) VALUES (:title)");
+    $stmt = $this->pdo->prepare("INSERT INTO todos (title,category) VALUES (:title,:category)");
     $stmt->bindValue('title', $title, \PDO::PARAM_STR);
+    $stmt->bindValue('category', $category, \PDO::PARAM_STR);
     $stmt->execute();
     return (int) $this->pdo->lastInsertId();
   }

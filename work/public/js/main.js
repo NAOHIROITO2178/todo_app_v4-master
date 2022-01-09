@@ -52,6 +52,7 @@
     }
   });
 
+  // todoを追加する処理
   function addTodo(id, titleValue) {
     const li = document.createElement('li');
     li.dataset.id = id;
@@ -70,26 +71,28 @@
     ul.insertBefore(li, ul.firstChild);
   }
 
-  document.querySelector('form').addEventListener('submit', e => {
-    e.preventDefault();
+  // study用todo追加処理
+  document.getElementById("form-study").addEventListener("submit", (e) => {
+		e.preventDefault();
 
-    const title = input.value;
+		const title = input.value;
 
-    fetch('?action=add', {
-      method: 'POST',
-      body: new URLSearchParams({
-        title: title,
-        token: token,
-      }),
-    })
-    .then(response => response.json())
-    .then(json => {
-      addTodo(json.id, title);
-    });
+		fetch("?action=add", {
+			method: "POST",
+			body: new URLSearchParams({
+				title: title,
+        category: "study",
+				token: token,
+			}),
+		})
+			.then((response) => response.json())
+			.then((json) => {
+				addTodo(json.id, title);
+			});
 
-    input.value = '';
-    input.focus();
-  });
+		input.value = "";
+		input.focus();
+	});
 
   const purge = document.querySelector('.purge');
   purge.addEventListener('click', () => {
