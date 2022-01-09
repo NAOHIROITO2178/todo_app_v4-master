@@ -23,134 +23,141 @@ $todos = $todo->getAll();
 <body>
   <div class = "six_Todos">
   <div>
-  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-    <header>
-      <h1>Todos1</h1>
-      <span class="purge">Purge</span>
-    </header>
+    <!-- todo1 -->
+    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+      <header>
+        <h1>Todos1</h1>
+        <span class="purge">Purge</span>
+      </header>
 
-    <form>
-      <input type="text" name="title" placeholder="Type new todo.">
-    </form>
+      <form>
+        <input type="text" name="title" placeholder="Type new todo.">
+      </form>
 
-    <ul>
-      <?php foreach ($todos as $todo): ?>
-      <li data-id="<?= Utils::h($todo->id); ?>">
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-        <span><?= Utils::h($todo->title); ?></span>
-        <span class="delete">x</span>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-  </main>
+      <ul>
+        <?php foreach ($todos as $todo): ?>
+        <li data-id="<?= Utils::h($todo->id); ?>">
+          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+          <span><?= Utils::h($todo->title); ?></span>
+          <span class="delete">x</span>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+    </main>
 
-  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-    <header>
-      <h1>Todos2</h1>
-      <span class="purge">Purge</span>
-    </header>
+    <!-- todo2 -->
+    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+      <header>
+        <h1>Todos2</h1>
+        <span class="purge">Purge</span>
+      </header>
 
-    <form>
-      <input type="text" name="title" placeholder="Type new todo.">
-    </form>
+      <form>
+        <input type="text" name="title" placeholder="Type new todo.">
+      </form>
 
-    <ul>
-      <?php foreach ($todos as $todo): ?>
-      <li data-id="<?= Utils::h($todo->id); ?>">
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-        <span><?= Utils::h($todo->title); ?></span>
-        <span class="delete">x</span>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-  </main>
+      <ul>
+        <?php foreach ($todos as $todo): ?>
+        <li data-id="<?= Utils::h($todo->id); ?>">
+          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+          <span><?= Utils::h($todo->title); ?></span>
+          <span class="delete">x</span>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+    </main>
 
-  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-    <header>
-      <h1>Todos3</h1>
-      <span class="purge">Purge</span>
-    </header>
+    <!-- todo3 -->
+    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+      <header>
+        <h1>Todos3</h1>
+        <span class="purge">Purge</span>
+      </header>
 
-    <form>
-      <input type="text" name="title" placeholder="Type new todo.">
-    </form>
+      <form>
+        <input type="text" name="title" placeholder="Type new todo.">
+      </form>
 
-    <ul>
-      <?php foreach ($todos as $todo): ?>
-      <li data-id="<?= Utils::h($todo->id); ?>">
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-        <span><?= Utils::h($todo->title); ?></span>
-        <span class="delete">x</span>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-  </main>
+      <ul>
+        <?php foreach ($todos as $todo): ?>
+        <li data-id="<?= Utils::h($todo->id); ?>">
+          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+          <span><?= Utils::h($todo->title); ?></span>
+          <span class="delete">x</span>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+    </main>
   </div>
 
   <div>
-  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-    <header>
-      <h1>Todos4</h1>
-      <span class="purge">Purge</span>
-    </header>
+  <!-- todo4  -->
+    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+      <header>
+        <h1>Todos4</h1>
+        <span class="purge">Purge</span>
+      </header>
 
-    <form>
-      <input type="text" name="title" placeholder="Type new todo.">
-    </form>
+      <form>
+        <input type="text" name="title" placeholder="Type new todo.">
+      </form>
 
-    <ul>
-      <?php foreach ($todos as $todo): ?>
-      <li data-id="<?= Utils::h($todo->id); ?>">
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-        <span><?= Utils::h($todo->title); ?></span>
-        <span class="delete">x</span>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-  </main>
+      <ul>
+        <?php foreach ($todos as $todo): ?>
+        <li data-id="<?= Utils::h($todo->id); ?>">
+          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+          <span><?= Utils::h($todo->title); ?></span>
+          <span class="delete">x</span>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+    </main>
 
-  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-    <header>
-      <h1>Todos5</h1>
-      <span class="purge">Purge</span>
-    </header>
+    <!-- todo5  -->
+    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+      <header>
+        <h1>Todos5</h1>
+        <span class="purge">Purge</span>
+      </header>
 
-    <form>
-      <input type="text" name="title" placeholder="Type new todo.">
-    </form>
+      <form>
+        <input type="text" name="title" placeholder="Type new todo.">
+      </form>
 
-    <ul>
-      <?php foreach ($todos as $todo): ?>
-      <li data-id="<?= Utils::h($todo->id); ?>">
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-        <span><?= Utils::h($todo->title); ?></span>
-        <span class="delete">x</span>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-  </main>
+      <ul>
+        <?php foreach ($todos as $todo): ?>
+        <li data-id="<?= Utils::h($todo->id); ?>">
+          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+          <span><?= Utils::h($todo->title); ?></span>
+          <span class="delete">x</span>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+    </main>
 
-  <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-    <header>
-      <h1>Todos6</h1>
-      <span class="purge">Purge</span>
-    </header>
+    <!-- todo6  -->
+    <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+      <header>
+        <h1>Todos6</h1>
+        <span class="purge">Purge</span>
+      </header>
 
-    <form>
-      <input type="text" name="title" placeholder="Type new todo.">
-    </form>
+      <form>
+        <input type="text" name="title" placeholder="Type new todo.">
+      </form>
 
-    <ul>
-      <?php foreach ($todos as $todo): ?>
-      <li data-id="<?= Utils::h($todo->id); ?>">
-        <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
-        <span><?= Utils::h($todo->title); ?></span>
-        <span class="delete">x</span>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-  </main>
+      <ul>
+        <?php foreach ($todos as $todo): ?>
+        <li data-id="<?= Utils::h($todo->id); ?>">
+          <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+          <span><?= Utils::h($todo->title); ?></span>
+          <span class="delete">x</span>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+    </main>
   </div>
+
   </div>
   <script src="js/main.js">
   </script>
