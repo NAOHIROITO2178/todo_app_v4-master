@@ -10,7 +10,12 @@ $pdo = Database::getInstance();
 
 $todo = new Todo($pdo);
 $todo->processPost();
-$todos = $todo->getAll();
+$study_todos = $todo->getAll("study");
+$club_todos = $todo->getAll("club");
+$friend_todos = $todo->getAll("friend");
+$love_todos = $todo->getAll("love");
+$course_todos = $todo->getAll("course");
+$event_todos = $todo->getAll("event");
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +40,7 @@ $todos = $todo->getAll();
       </form>
 
       <ul>
-        <?php foreach ($todos as $todo): ?>
+        <?php foreach ($study_todos as $todo): ?>
         <li data-id="<?= Utils::h($todo->id); ?>">
           <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
           <span><?= Utils::h($todo->title); ?></span>
@@ -57,7 +62,7 @@ $todos = $todo->getAll();
       </form>
 
       <ul>
-        <?php foreach ($todos as $todo): ?>
+        <?php foreach ($club_todos as $todo): ?>
         <li data-id="<?= Utils::h($todo->id); ?>">
           <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
           <span><?= Utils::h($todo->title); ?></span>
@@ -79,7 +84,7 @@ $todos = $todo->getAll();
       </form>
 
       <ul>
-        <?php foreach ($todos as $todo): ?>
+        <?php foreach ($friend_todos as $todo): ?>
         <li data-id="<?= Utils::h($todo->id); ?>">
           <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
           <span><?= Utils::h($todo->title); ?></span>
@@ -103,7 +108,7 @@ $todos = $todo->getAll();
       </form>
 
       <ul>
-        <?php foreach ($todos as $todo): ?>
+        <?php foreach ($love_todos as $todo): ?>
         <li data-id="<?= Utils::h($todo->id); ?>">
           <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
           <span><?= Utils::h($todo->title); ?></span>
@@ -125,7 +130,7 @@ $todos = $todo->getAll();
       </form>
 
       <ul>
-        <?php foreach ($todos as $todo): ?>
+        <?php foreach ($course_todos as $todo): ?>
         <li data-id="<?= Utils::h($todo->id); ?>">
           <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
           <span><?= Utils::h($todo->title); ?></span>
@@ -147,7 +152,7 @@ $todos = $todo->getAll();
       </form>
 
       <ul>
-        <?php foreach ($todos as $todo): ?>
+        <?php foreach ($event_todos as $todo): ?>
         <li data-id="<?= Utils::h($todo->id); ?>">
           <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
           <span><?= Utils::h($todo->title); ?></span>
