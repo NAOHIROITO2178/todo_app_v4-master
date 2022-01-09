@@ -8,5 +8,6 @@ CREATE TABLE todos (
 INSERT INTO todos (title) VALUES ('aaa');
 INSERT INTO todos (title, is_done) VALUES ('bbb', true);
 INSERT INTO todos (title) VALUES ('ccc');
+alter table todos add category varchar(256) not null;
 
 SELECT * FROM todos;
