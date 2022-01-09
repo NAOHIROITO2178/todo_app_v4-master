@@ -3,50 +3,49 @@
 {
 	const token = document.querySelector("main").dataset.token;
 	const input = document.querySelector('[name="title"]');
-	const ul = document.querySelector("ul");
 
 	input.focus();
 
-	// ul.addEventListener("click", (e) => {
-	// 	if (e.target.type === "checkbox") {
-	// 		fetch("?action=toggle", {
-	// 			method: "POST",
-	// 			body: new URLSearchParams({
-	// 				id: e.target.parentNode.dataset.id,
-	// 				token: token,
-	// 			}),
-	// 		})
-	// 			.then((response) => {
-	// 				if (!response.ok) {
-	// 					throw new Error("This todo has been deleted!");
-	// 				}
+	// イベントリスナを複数要素にまとめて登録する(クラス名から取得)
+	// toggle_checkboxクラスがついている要素を全て取得
+	const toggle_checkboxes = document.getElementsByClassName("toggle_checkbox");
+	for (let toggle_checkbox of toggle_checkboxes) {
+		toggle_checkbox.addEventListener("click", (e) => {
+      fetch("?action=toggle", {
+				method: "POST",
+				body: new URLSearchParams({
+					id: e.target.parentNode.dataset.id,
+					token: token,
+				}),
+			})
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error("This todo has been deleted!");
+					}
+					return response.json();
+				})
+				.then((json) => {
+					if (json.is_done !== e.target.checked) {
+						alert("This Todo has been updated. UI is being updated.");
+						e.target.checked = json.is_done;
+					}
+				})
+				.catch((err) => {
+					alert(err.message);
+					location.reload();
+				});
+			e.preventDefault(); //イベントのキャンセル
+		});
+	}
 
-	// 				return response.json();
-	// 			})
-	// 			.then((json) => {
-	// 				if (json.is_done !== e.target.checked) {
-	// 					alert("This Todo has been updated. UI is being updated.");
-	// 					e.target.checked = json.is_done;
-	// 				}
-	// 			})
-	// 			.catch((err) => {
-	// 				alert(err.message);
-	// 				location.reload();
-	// 			});
-	// 	}
-	// });
-
-
-
-  // イベントリスナを複数要素にまとめて登録する(クラス名から取得)
-  // deleteクラスがついている要素を全て取得
+	// イベントリスナを複数要素にまとめて登録する(クラス名から取得)
+	// deleteクラスがついている要素を全て取得
 	const delete_buttons = document.getElementsByClassName("delete");
 	for (let delete_button of delete_buttons) {
 		delete_button.addEventListener("click", (e) => {
 			if (!confirm("Are you sure?")) {
 				return;
 			}
-
 			fetch("?action=delete", {
 				method: "POST",
 				body: new URLSearchParams({
@@ -54,8 +53,7 @@
 					token: token,
 				}),
 			});
-
-      e.target.parentNode.remove();
+			e.target.parentNode.remove();
 			e.preventDefault(); //イベントのキャンセル
 		});
 	}

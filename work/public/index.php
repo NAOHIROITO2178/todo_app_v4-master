@@ -39,7 +39,7 @@ $event_todos = $todo->getAll("event");
         <ul>
           <?php foreach ($study_todos as $todo) : ?>
             <li data-id="<?= Utils::h($todo->id); ?>">
-              <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
               <span><?= Utils::h($todo->title); ?></span>
               <span class="delete">x</span>
             </li>
@@ -56,7 +56,7 @@ $event_todos = $todo->getAll("event");
         <ul>
           <?php foreach ($club_todos as $todo) : ?>
             <li data-id="<?= Utils::h($todo->id); ?>">
-              <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
               <span><?= Utils::h($todo->title); ?></span>
               <span class="delete">x</span>
             </li>
@@ -73,7 +73,7 @@ $event_todos = $todo->getAll("event");
         <ul>
           <?php foreach ($friend_todos as $todo) : ?>
             <li data-id="<?= Utils::h($todo->id); ?>">
-              <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
               <span><?= Utils::h($todo->title); ?></span>
               <span class="delete">x</span>
             </li>
@@ -92,7 +92,7 @@ $event_todos = $todo->getAll("event");
         <ul>
           <?php foreach ($love_todos as $todo) : ?>
             <li data-id="<?= Utils::h($todo->id); ?>">
-              <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
               <span><?= Utils::h($todo->title); ?></span>
               <span class="delete">x</span>
             </li>
@@ -109,7 +109,7 @@ $event_todos = $todo->getAll("event");
         <ul>
           <?php foreach ($course_todos as $todo) : ?>
             <li data-id="<?= Utils::h($todo->id); ?>">
-              <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
               <span><?= Utils::h($todo->title); ?></span>
               <span class="delete">x</span>
             </li>
@@ -126,7 +126,7 @@ $event_todos = $todo->getAll("event");
         <ul>
           <?php foreach ($event_todos as $todo) : ?>
             <li data-id="<?= Utils::h($todo->id); ?>">
-              <input type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
               <span><?= Utils::h($todo->title); ?></span>
               <span class="delete">x</span>
             </li>
