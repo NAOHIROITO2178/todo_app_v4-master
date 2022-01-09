@@ -155,11 +155,22 @@ $todos = $todo->getAll();
   <script src="js/main.js">
   </script>
 </body>
-<footer id = "Time_zone">
-  <?php
-  date_default_timezone_set('Asia/Tokyo');
-  $date = new DateTime('now');
-  echo $date->format('Y m/d H:i');
-  ?>
-</footer>
+<footer>
+<p id="myid"></p>
+    <script>
+        t = 0;
+        var elem = document.getElementById("myid");
+ 
+        function myfunc(){
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            elem.innerHTML = hours+":"+minutes+":"+seconds+;
+        }
+ 
+        t = setInterval("myfunc()", 500);
+ 
+    </script>
+  </footer>
 </html>
