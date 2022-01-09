@@ -52,25 +52,6 @@
     }
   });
 
-  // todoを追加する処理
-  function addTodo(id, titleValue) {
-    const li = document.createElement('li');
-    li.dataset.id = id;
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    const title = document.createElement('span');
-    title.textContent = titleValue;
-    const deleteSpan = document.createElement('span');
-    deleteSpan.textContent = 'x';
-    deleteSpan.classList.add('delete');
-
-    li.appendChild(checkbox);
-    li.appendChild(title);
-    li.appendChild(deleteSpan);
-
-    ul.insertBefore(li, ul.firstChild);
-  }
-
   // study用todo追加処理
   document.getElementById("form-study").addEventListener("submit", (e) => {
 		e.preventDefault();
@@ -92,6 +73,7 @@
 
 		input.value = "";
 		input.focus();
+    location.reload();
 	});
 
   const purge = document.querySelector('.purge');
