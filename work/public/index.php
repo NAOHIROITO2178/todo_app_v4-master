@@ -136,7 +136,8 @@ $event_todos = $todo->getAll("event");
     </div>
   </div>
   <form>
-    <input type="text" name="title" placeholder="Type new todo.">
+    <input type="text" name="title" placeholder="ここに入力してください">
+    エンターキーで追加<br>
     <label>
       <input type="radio" name="category" value="study" checked>勉強
     </label>
