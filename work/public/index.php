@@ -161,10 +161,10 @@ $event_todos = $todo->getAll("event");
   </script>
 </body>
 <footer>
-<span id="view_time"></span>
+<span id="now_time"></span>
 
 <script type="text/javascript">
-document.getElementById("view_time").innerHTML = getNow();
+document.getElementById("now_time").innerHTML = getNow();
 
 function getNow() {
 	var now = new Date();
