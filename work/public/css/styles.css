@@ -1,5 +1,10 @@
-body {
+body  {
   font-family: Arial, sans-serif;
+}
+
+.top_title{
+  text-align: center;
+  font-size: 100;
 }
 
 header {
@@ -69,3 +74,4 @@ input[type="checkbox"] {
 border: 1px solid #999;
 padding: 10px;
 }
+

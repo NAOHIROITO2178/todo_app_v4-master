@@ -21,6 +21,9 @@ $todos = $todo->getAll();
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div class = "top_title">
+    やることリスト
+  </div>
   <div class = "six_Todos">
   <div>
     <!-- 勉強 -->
@@ -170,10 +173,12 @@ $todos = $todo->getAll();
  
         function myfunc(){
             var date = new Date();
+            var years = date.getYears();
+            var months = date.getMonths();
+            var days = date.getDays();
             var hours = date.getHours();
             var minutes = date.getMinutes();
-            var seconds = date.getSeconds();
-            elem.innerHTML = hours+":"+minutes+":"+seconds+;
+            elem.innerHTML = years+" "+months+"/"+days+" "+hours+":"+minutes;
         }
  
         t = setInterval("myfunc()", 500);
