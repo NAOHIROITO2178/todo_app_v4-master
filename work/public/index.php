@@ -139,7 +139,7 @@ $event_todos = $todo->getAll("event");
     <input type="text" name="title" placeholder="ここに入力してください">
     エンターキーで追加<br>
     <label>
-      <input type="radio" name="category" value="study" checked>勉強
+      <input type="radio" name="category" value="study">勉強
     </label>
     <label>
       <input type="radio" name="category" value="club">部活
