@@ -192,4 +192,7 @@ function now() {
 }
 </script>
 </footer>
+<form action = "http://localhost:8573">
+<button id = "go_chatRoom">困ったことがあったらこちらへどうぞ！</button>
+</form>
 </html>

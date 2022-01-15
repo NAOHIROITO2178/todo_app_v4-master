@@ -75,3 +75,10 @@ border: 1px solid #999;
 padding: 10px;
 }
 
+.go_chatRoom{
+text-align: center;
+border: 1px solid #999;
+padding: 10px;
+background: #fff9cc;
+margin-top:10px;
+}
