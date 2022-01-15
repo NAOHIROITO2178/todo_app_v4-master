@@ -194,10 +194,10 @@ $other_todos = $todo->getAll("other");
 timerID = setInterval('time()',500); 
 
 function minute2keta(num) {
-   var ret;
-   if( num < 10 ) { ret = "0" + num; }
-   else { ret = num; }
-   return ret;
+   let addketa;
+   if( num < 10 ) { addketa = "0" + num; }
+   else { addketa = num; }
+   return addketa;
 }
 
 function time() {
@@ -205,16 +205,16 @@ function time() {
 }
 
 function now() {
-	var now = new Date();
-	var year = now.getFullYear();
-	var mon = now.getMonth()+1; 
-	var day = now.getDate();
-  var you = now.getDay();
-  var week = new Array("日","月","火","水","木","金","土");
-	var hour = now.getHours();
-	var min = minute2keta(now.getMinutes());
+	let nowTime = new Date();
+	let year = nowTime.getFullYear();
+	let mon = nowTime.getMonth()+1; 
+	let day = nowTime.getDate();
+  let you = nowTime.getDay();
+  let week = new Array("日","月","火","水","木","金","土");
+	let hour = nowTime.getHours();
+	let min = minute2keta(now.getMinutes());
 
-	var view = year + " " + mon + "/" + day + "(" +week[you]+ ") " + hour + ":" + min; 
+	let view = year + " " + mon + "/" + day + "(" +week[you]+ ") " + hour + ":" + min; 
 	return view;
 }
 </script>
