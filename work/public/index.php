@@ -16,6 +16,7 @@ $friend_todos = $todo->getAll("friend");
 $love_todos = $todo->getAll("love");
 $course_todos = $todo->getAll("course");
 $event_todos = $todo->getAll("event");
+$hobby_todos = $todo->getAll("hobby");
 $other_todos = $todo->getAll("other");
 
 ?>
@@ -140,6 +141,24 @@ $other_todos = $todo->getAll("other");
       </main>
       <!-- 学校行事  -->
 
+      <!-- 学校行事  -->
+      <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+        <header>
+          <h1>趣味</h1>
+          <span class="purge">Purge</span>
+        </header>
+        <ul>
+          <?php foreach ($hobby_todos as $todo) : ?>
+            <li data-id="<?= Utils::h($todo->id); ?>">
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <span><?= Utils::h($todo->title); ?></span>
+              <span class="delete">x</span>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </main>
+      <!-- 学校行事  -->
+
       <!-- その他 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header>
@@ -179,6 +198,9 @@ $other_todos = $todo->getAll("other");
     </label>
     <label>
       <input type="radio" name="category" value="event">学校行事
+    </label>
+    <label>
+      <input type="radio" name="category" value="hobby">趣味
     </label>
     <label>
       <input type="radio" name="category" value="other">その他
