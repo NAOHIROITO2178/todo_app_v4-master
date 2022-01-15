@@ -141,7 +141,7 @@ $other_todos = $todo->getAll("other");
       </main>
       <!-- 学校行事  -->
 
-      <!-- 学校行事  -->
+      <!-- 趣味  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header>
           <h1>趣味</h1>
@@ -157,7 +157,7 @@ $other_todos = $todo->getAll("other");
           <?php endforeach; ?>
         </ul>
       </main>
-      <!-- 学校行事  -->
+      <!-- 趣味  -->
 
       <!-- その他 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
