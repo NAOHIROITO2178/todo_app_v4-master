@@ -161,22 +161,34 @@ $event_todos = $todo->getAll("event");
   </script>
 </body>
 <footer>
-<span id="now_time"></span>
+<span id="ShowNowTime"></span>
 
 <script type="text/javascript">
-document.getElementById("now_time").innerHTML = getNow();
+timerID = setInterval('time()',500); 
 
-function getNow() {
+function minute2keta(num) {
+   var ret;
+   if( num < 10 ) { ret = "0" + num; }
+   else { ret = num; }
+   return ret;
+}
+
+function time() {
+	document.getElementById("ShowNowTime").innerHTML = now();
+}
+
+function now() {
 	var now = new Date();
 	var year = now.getFullYear();
-	var mon = now.getMonth()+1; //１を足すこと
+	var mon = now.getMonth()+1; 
 	var day = now.getDate();
+  var you = now.getDay();
+  var youbi = new Array("日","月","火","水","木","金","土");
 	var hour = now.getHours();
-	var min = now.getMinutes();
+	var min = minute2keta(now.getMinutes());
 
-	//出力用
-	var s = year + " " + mon + "/" + day + " " + hour + ":" + min; 
-	return s;
+	var view = year + " " + mon + "/" + day + "(" +youbi[you]+ ") " + hour + ":" + min; 
+	return view;
 }
 </script>
 </footer>
