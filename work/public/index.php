@@ -212,7 +212,7 @@ function now() {
   let you = nowTime.getDay();
   let week = new Array("日","月","火","水","木","金","土");
 	let hour = nowTime.getHours();
-	let min = minute2keta(now.getMinutes());
+	let min = minute2keta(nowTime.getMinutes());
 
 	let view = year + " " + mon + "/" + day + "(" +week[you]+ ") " + hour + ":" + min; 
 	return view;
