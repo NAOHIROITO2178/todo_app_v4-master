@@ -62,15 +62,15 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-.six_Todos{
+.seven_Todos{
  display: flex;
 }
 
-.six_Todos> div{
+.seven_Todos> div{
   width:50%;
 }
 
-.six_Todos,.six_Todos>div{
+.seven_Todos,.seven_Todos>div{
 border: 1px solid #999;
 padding: 10px;
 }

@@ -16,6 +16,7 @@ $friend_todos = $todo->getAll("friend");
 $love_todos = $todo->getAll("love");
 $course_todos = $todo->getAll("course");
 $event_todos = $todo->getAll("event");
+$other_todos = $todo->getAll("other");
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@ $event_todos = $todo->getAll("event");
 </head>
 
 <body>
-  <div class="six_Todos">
+  <div class="seven_Todos">
     <div>
       <!-- 勉強 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
@@ -46,6 +47,7 @@ $event_todos = $todo->getAll("event");
           <?php endforeach; ?>
         </ul>
       </main>
+      <!-- 勉強 -->
 
       <!-- 部活動 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
@@ -63,6 +65,7 @@ $event_todos = $todo->getAll("event");
           <?php endforeach; ?>
         </ul>
       </main>
+      <!-- 部活動 -->
 
       <!-- 友達 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
@@ -80,9 +83,8 @@ $event_todos = $todo->getAll("event");
           <?php endforeach; ?>
         </ul>
       </main>
-    </div>
+      <!-- 友達 -->
 
-    <div>
       <!-- 恋愛  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header>
@@ -99,7 +101,9 @@ $event_todos = $todo->getAll("event");
           <?php endforeach; ?>
         </ul>
       </main>
-
+      <!-- 恋愛  -->
+    </div>
+    <div>
       <!-- 進路  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header>
@@ -116,6 +120,7 @@ $event_todos = $todo->getAll("event");
           <?php endforeach; ?>
         </ul>
       </main>
+      <!-- 進路  -->
 
       <!-- 学校行事  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
@@ -133,6 +138,25 @@ $event_todos = $todo->getAll("event");
           <?php endforeach; ?>
         </ul>
       </main>
+      <!-- 学校行事  -->
+
+      <!-- その他 -->
+      <main data-token="<?= Utils::h($_SESSION['token']); ?>">
+        <header>
+          <h1>その他</h1>
+          <span class="purge">Purge</span>
+        </header>
+        <ul>
+          <?php foreach ($other_todos as $todo) : ?>
+            <li data-id="<?= Utils::h($todo->id); ?>">
+              <input class="toggle_checkbox" type="checkbox" <?= $todo->is_done ? 'checked' : ''; ?>>
+              <span><?= Utils::h($todo->title); ?></span>
+              <span class="delete">x</span>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </main>
+      <!-- その他 -->
     </div>
   </div>
   <form>
@@ -155,6 +179,9 @@ $event_todos = $todo->getAll("event");
     </label>
     <label>
       <input type="radio" name="category" value="event">学校行事
+    </label>
+    <label>
+      <input type="radio" name="category" value="other">その他
     </label>
   </form>
   <script src="js/main.js">
