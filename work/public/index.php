@@ -183,11 +183,11 @@ function now() {
 	var mon = now.getMonth()+1; 
 	var day = now.getDate();
   var you = now.getDay();
-  var youbi = new Array("日","月","火","水","木","金","土");
+  var week = new Array("日","月","火","水","木","金","土");
 	var hour = now.getHours();
 	var min = minute2keta(now.getMinutes());
 
-	var view = year + " " + mon + "/" + day + "(" +youbi[you]+ ") " + hour + ":" + min; 
+	var view = year + " " + mon + "/" + day + "(" +week[you]+ ") " + hour + ":" + min; 
 	return view;
 }
 </script>
