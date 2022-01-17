@@ -85,22 +85,24 @@
 		location.reload();
 	});
 
-	// deleteクラスがついている要素を全て取得
-	// const purges = document.getElementsByClassName("purge");
-	const purge = document.querySelector(".purge");
-	purge.addEventListener("click", () => {
-		if (!confirm("Are you sure?")) {
-			return;
-		}
-
-		fetch("?action=purge", {
-			method: "POST",
-			body: new URLSearchParams({
-				category: "love",
-				token: token,
-			}),
+	// purgeクラスがついている要素を全て取得
+	const purges = document.getElementsByClassName("purge");
+	for (let purge of purges) {
+		purge.addEventListener("click", (e) => {
+		console.log("purgeOK");
+		console.log(e.target.parentNode.dataset.id);
+			if (!confirm("Are you sure?")) {
+				return;
+			}
+			fetch("?action=purge", {
+				method: "POST",
+				body: new URLSearchParams({
+					category: e.target.parentNode.dataset.id,
+					token: token,
+				}),
+			});
+			e.preventDefault(); //イベントのキャンセル
+			location.reload();
 		});
-
-		location.reload();
-	});
+	}
 }

@@ -30,14 +30,14 @@ $other_todos = $todo->getAll("other");
 </head>
 
 <body>
-  <header class = "top_title">
+  <header class="top_title">
     みんなのShoolTodo
   </header>
   <div class="seven_Todos">
     <div>
       <!-- 勉強 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="study">
           <h1>勉強</h1>
           <span class="purge">Purge</span>
         </header>
@@ -55,7 +55,7 @@ $other_todos = $todo->getAll("other");
 
       <!-- 部活動 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="club">
           <h1>部活動</h1>
           <span class="purge">Purge</span>
         </header>
@@ -73,7 +73,7 @@ $other_todos = $todo->getAll("other");
 
       <!-- 友達 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="friend">
           <h1>友達</h1>
           <span class="purge">Purge</span>
         </header>
@@ -91,7 +91,7 @@ $other_todos = $todo->getAll("other");
 
       <!-- 恋愛  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="love">
           <h1>恋愛</h1>
           <span class="purge">Purge</span>
         </header>
@@ -110,7 +110,7 @@ $other_todos = $todo->getAll("other");
     <div>
       <!-- 進路  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="course">
           <h1>進路</h1>
           <span class="purge">Purge</span>
         </header>
@@ -128,7 +128,7 @@ $other_todos = $todo->getAll("other");
 
       <!-- 学校行事  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="event">
           <h1>学校行事</h1>
           <span class="purge">Purge</span>
         </header>
@@ -146,7 +146,7 @@ $other_todos = $todo->getAll("other");
 
       <!-- 趣味  -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="hobby">
           <h1>趣味</h1>
           <span class="purge">Purge</span>
         </header>
@@ -164,7 +164,7 @@ $other_todos = $todo->getAll("other");
 
       <!-- その他 -->
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
-        <header>
+        <header data-id="other">
           <h1>その他</h1>
           <span class="purge">Purge</span>
         </header>
@@ -213,38 +213,42 @@ $other_todos = $todo->getAll("other");
   </script>
 </body>
 <footer>
-<span id="ShowNowTime"></span>
+  <span id="ShowNowTime"></span>
 
-<script type="text/javascript">
-timerID = setInterval('time()',500); 
+  <script type="text/javascript">
+    timerID = setInterval('time()', 500);
 
-function minute2keta(num) {
-   let addketa;
-   if( num < 10 ) { addketa = "0" + num; }
-   else { addketa = num; }
-   return addketa;
-}
+    function minute2keta(num) {
+      let addketa;
+      if (num < 10) {
+        addketa = "0" + num;
+      } else {
+        addketa = num;
+      }
+      return addketa;
+    }
 
-function time() {
-	document.getElementById("ShowNowTime").innerHTML = now();
-}
+    function time() {
+      document.getElementById("ShowNowTime").innerHTML = now();
+    }
 
-function now() {
-	let nowTime = new Date();
-	let year = nowTime.getFullYear();
-	let mon = nowTime.getMonth()+1; 
-	let day = nowTime.getDate();
-  let you = nowTime.getDay();
-  let week = new Array("日","月","火","水","木","金","土");
-	let hour = nowTime.getHours();
-	let min = minute2keta(nowTime.getMinutes());
+    function now() {
+      let nowTime = new Date();
+      let year = nowTime.getFullYear();
+      let mon = nowTime.getMonth() + 1;
+      let day = nowTime.getDate();
+      let you = nowTime.getDay();
+      let week = new Array("日", "月", "火", "水", "木", "金", "土");
+      let hour = nowTime.getHours();
+      let min = minute2keta(nowTime.getMinutes());
 
-	let view = year + " " + mon + "/" + day + "(" +week[you]+ ") " + hour + ":" + min; 
-	return view;
-}
-</script>
+      let view = year + " " + mon + "/" + day + "(" + week[you] + ") " + hour + ":" + min;
+      return view;
+    }
+  </script>
 </footer>
-<form action = "http://localhost:8573">
-<button id = "go_chatRoom">困ったことがあったらこちらへどうぞ！</button>
+<form action="http://localhost:8573">
+  <button id="go_chatRoom">困ったことがあったらこちらへどうぞ！</button>
 </form>
+
 </html>
