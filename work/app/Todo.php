@@ -96,7 +96,13 @@ class Todo
 
   private function purge()
   {
-    $this->pdo->query("DELETE FROM todos WHERE is_done = 1");
+    $category = filter_input(INPUT_POST, 'category');
+    if (empty($category)) {
+      return;
+    }
+    $stmt = $this->pdo->prepare("DELETE FROM todos WHERE is_done = 1 AND category = :category");
+    $stmt->bindValue('category', $category, \PDO::PARAM_INT);
+    $stmt->execute();
   }
 
   public function getAll($category)

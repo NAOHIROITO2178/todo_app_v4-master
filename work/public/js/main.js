@@ -11,7 +11,7 @@
 	const toggle_checkboxes = document.getElementsByClassName("toggle_checkbox");
 	for (let toggle_checkbox of toggle_checkboxes) {
 		toggle_checkbox.addEventListener("click", (e) => {
-      fetch("?action=toggle", {
+			fetch("?action=toggle", {
 				method: "POST",
 				body: new URLSearchParams({
 					id: e.target.parentNode.dataset.id,
@@ -86,6 +86,8 @@
 		location.reload();
 	});
 
+	// deleteクラスがついている要素を全て取得
+	// const purges = document.getElementsByClassName("purge");
 	const purge = document.querySelector(".purge");
 	purge.addEventListener("click", () => {
 		if (!confirm("Are you sure?")) {
@@ -95,15 +97,11 @@
 		fetch("?action=purge", {
 			method: "POST",
 			body: new URLSearchParams({
+				category: "love",
 				token: token,
 			}),
 		});
 
-		const lis = document.querySelectorAll("li");
-		lis.forEach((li) => {
-			if (li.children[0].checked) {
-				li.remove();
-			}
-		});
+		location.reload();
 	});
 }
