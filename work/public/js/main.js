@@ -26,7 +26,6 @@
 				})
 				.then((json) => {
 					if (json.is_done !== e.target.checked) {
-						alert("This Todo has been updated. UI is being updated.");
 						e.target.checked = json.is_done;
 					}
 				})
