@@ -183,7 +183,6 @@ $other_todos = $todo->getAll("other");
   </div>
   <form>
     <input type="text" name="title" placeholder="ここに入力してください">
-    エンターキーで追加<br>
     <label>
       <input type="radio" name="category" value="study">勉強
     </label>
@@ -208,7 +207,8 @@ $other_todos = $todo->getAll("other");
     <label>
       <input type="radio" name="category" value="other">その他
     </label>
-  </form>
+  </form><br>
+  エンターキーで追加
   <script src="js/main.js">
   </script>
 </body>
