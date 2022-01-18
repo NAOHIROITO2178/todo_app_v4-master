@@ -58,7 +58,7 @@
 	}
 
 	// study用todo追加処理
-	document.querySelector("form").addEventListener("submit", (e) => {
+	document.getElementById("add").addEventListener("submit", (e) => {
 		e.preventDefault();
 
 		const title = input.value;

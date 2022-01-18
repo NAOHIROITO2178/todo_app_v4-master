@@ -181,8 +181,9 @@ $other_todos = $todo->getAll("other");
       <!-- その他 -->
     </div>
   </div>
-  <form>
+  <form id = "add">
     <input type="text" name="title" placeholder="ここに入力してください">
+    <button>追加</button><br>
     <label>
       <input type="radio" name="category" value="study">勉強
     </label>
