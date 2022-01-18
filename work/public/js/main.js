@@ -42,9 +42,9 @@
 	const delete_buttons = document.getElementsByClassName("delete");
 	for (let delete_button of delete_buttons) {
 		delete_button.addEventListener("click", (e) => {
-			if (!confirm("Are you sure?")) {
-				return;
-			}
+			// if (!confirm("Are you sure?")) {
+			// 	return;
+			// }
 			fetch("?action=delete", {
 				method: "POST",
 				body: new URLSearchParams({
@@ -91,7 +91,7 @@
 		purge.addEventListener("click", (e) => {
 		console.log("purgeOK");
 		console.log(e.target.parentNode.dataset.id);
-			if (!confirm("Are you sure?")) {
+			if (!confirm("本当によろしいですか?")) {
 				return;
 			}
 			fetch("?action=purge", {
