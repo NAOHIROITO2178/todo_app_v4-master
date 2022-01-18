@@ -210,7 +210,7 @@ $other_todos = $todo->getAll("other");
       <input type="radio" name="category" value="other">その他
     </label>
   </form>
-  エンターキーで追加
+  
   <script src="js/main.js">
   </script>
 </body>
