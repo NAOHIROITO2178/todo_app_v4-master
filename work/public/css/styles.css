@@ -77,10 +77,27 @@ padding: 10px;
 background-color: rgb(127, 255, 138);
 }
 
-.go_chatRoom{
-text-align: center;
-border: 1px solid #999;
-padding: 10px;
-background: #fff9cc;
-margin-top:10px;
+.go_chat{
+  display:block;
+  width:150px;
+  margin:0 auto;
+}
+
+.addlist{
+  display:block;
+  width:150px;
+  height:60px;
+  font-size: 30px;
+  color:orange;
+  background: yellow;
+  font-weight: bold;
+  margin:0 auto;
+}
+
+.ShowNowTime{
+  display:flex;
+}
+
+.End{
+  font-weight: bold;
 }

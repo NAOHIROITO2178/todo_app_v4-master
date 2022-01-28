@@ -180,8 +180,6 @@ $other_todos = $todo->getAll("other");
   </div>
   <form id = "add">
     <input type="text" name="title" placeholder="ここに入力してください">
-    <button>追加</button><br>
-    <br>
     <label>
       <input type="radio" name="category" value="study">勉強
     </label>
@@ -206,12 +204,26 @@ $other_todos = $todo->getAll("other");
     <label>
       <input type="radio" name="category" value="other">その他
     </label>
+    <button class = "addlist">追加</button>
   </form>
-  
   <script src="js/main.js">
-  </script>
+  </script> 
 </body>
+<br>
+<div class = "go_chat">
+<form action="http://localhost:8573">
+  <button>困ったことがあったらこちらへどうぞ！</button>
+</form> 
+</div>
+<a href = "index.html" class = "End" id = "owari">終了する</a>
 <footer>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <span id="ShowNowTime"></span>
 
   <script type="text/javascript">
@@ -246,8 +258,4 @@ $other_todos = $todo->getAll("other");
     }
   </script>
 </footer>
-<form action="http://localhost:8573">
-  <button id="go_chatRoom">困ったことがあったらこちらへどうぞ！</button>
-</form>
-
 </html>

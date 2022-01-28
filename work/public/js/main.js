@@ -105,4 +105,8 @@
 			location.reload();
 		});
 	}
+
+	document.getElementById("owari").addEventListener("click", e =>{
+		 alert("本当に終了しますか？");
+	});
 }
