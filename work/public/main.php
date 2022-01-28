@@ -28,7 +28,7 @@ $other_todos = $todo->getAll("other");
   <title>My Todos</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
+<div class = "blur">
 <body>
   <div class="seven_Todos">
     <div>
@@ -265,4 +265,5 @@ document.getElementById('owari').addEventListener('click', BackTitle);
     }
   </script>
 </footer>
+</div>
 </html>

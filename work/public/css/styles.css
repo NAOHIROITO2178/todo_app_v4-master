@@ -1,5 +1,10 @@
 body  {
   font-family: Arial, sans-serif;
+  background: url(https://userdisk.webry.biglobe.ne.jp/012/472/52/N000/000/000/127764512779316326375_BG39a.jpg) center center / cover no-repeat fixed;
+}
+
+.blur{
+  backdrop-filter: blur(8px);
 }
 
 .top_title{
