@@ -211,7 +211,7 @@ $other_todos = $todo->getAll("other");
 </body>
 <br>
 <div class = "go_chat">
-<a href="http://localhost:8573" target= "_blank">
+<a href="http://localhost:8573">
   <button>困ったことがあったらこちらへどうぞ！</button>
 </a> 
 </div>
@@ -229,7 +229,7 @@ document.getElementById('owari').addEventListener('click', BackTitle);
   <br>
   <br>
   <br>
-  <span id="ShowNowTime"></span>
+  <span id="ShowNowTime" class = "LookTime"></span>
 
   <script type="text/javascript">
     timerID = setInterval('time()', 500);

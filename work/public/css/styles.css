@@ -117,14 +117,17 @@ background-color: rgb(127, 255, 138);
   margin:0 auto;
 }
 
-.ShowNowTime{
-  display:flex;
-}
-
 .End{
   font-weight: bold;
 }
 
 button{
   margin-top: 60px;
+}
+
+.LookTime{
+  font-size: 40px;
+  color: red;
+  background-color: aqua;
+  margin-bottom: 20px;
 }
