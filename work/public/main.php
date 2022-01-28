@@ -226,9 +226,6 @@ document.getElementById('owari').addEventListener('click', BackTitle);
 <footer>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
   <span id="ShowNowTime" class = "LookTime"></span>
 
   <script type="text/javascript">
