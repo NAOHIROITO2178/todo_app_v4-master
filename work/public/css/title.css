@@ -7,8 +7,13 @@
   background-color: aquamarine;
 }
 
+body{
+  background-image: url();
+}
+
 .go_todos{
-  background:green;
+  background:yellowgreen;
+  font-weight: bold;
   padding:1em 1em;
   border:black 1px solid;
   text-decoration:none;
