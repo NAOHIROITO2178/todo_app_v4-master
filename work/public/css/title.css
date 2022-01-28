@@ -8,7 +8,7 @@
 }
 
 body{
-  background-image: url();
+  background-image: url(BG14a_80.jpg);
 }
 
 .go_todos{
@@ -17,8 +17,9 @@ body{
   padding:1em 1em;
   border:black 1px solid;
   text-decoration:none;
-  font-size:1.5em;
+  font-size:45px;
   display:block;
-  width:150px;
-  margin:0 auto;
+  width:250px;
+  margin: auto;
+  margin-top: 300px;
 }

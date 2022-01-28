@@ -215,7 +215,14 @@ $other_todos = $todo->getAll("other");
   <button>困ったことがあったらこちらへどうぞ！</button>
 </form> 
 </div>
-<a href = "index.html" class = "End" id = "owari">終了する</a>
+<a href = "index.html" class = "End" id = "owari">＜＜＜終了する</a>
+<script>
+  function BackTitle(){
+    alert('本当に終了しますか？');
+}
+
+document.getElementById('owari').addEventListener('click', BackTitle);
+</script>
 <footer>
   <br>
   <br>
