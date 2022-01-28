@@ -30,9 +30,6 @@ $other_todos = $todo->getAll("other");
 </head>
 
 <body>
-  <header class="top_title">
-    みんなのShoolTodo
-  </header>
   <div class="seven_Todos">
     <div>
       <!-- 勉強 -->
