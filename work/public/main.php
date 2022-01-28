@@ -36,7 +36,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="study">
           <h1>勉強</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($study_todos as $todo) : ?>
@@ -54,7 +54,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="club">
           <h1>部活動</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($club_todos as $todo) : ?>
@@ -72,7 +72,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="friend">
           <h1>友達</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($friend_todos as $todo) : ?>
@@ -90,7 +90,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="love">
           <h1>恋愛</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($love_todos as $todo) : ?>
@@ -109,7 +109,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="course">
           <h1>進路</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($course_todos as $todo) : ?>
@@ -127,7 +127,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="event">
           <h1>学校行事</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($event_todos as $todo) : ?>
@@ -145,7 +145,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="hobby">
           <h1>趣味</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($hobby_todos as $todo) : ?>
@@ -163,7 +163,7 @@ $other_todos = $todo->getAll("other");
       <main data-token="<?= Utils::h($_SESSION['token']); ?>">
         <header data-id="other">
           <h1>その他</h1>
-          <span class="purge">Purge</span>
+          <span class="purge">全部消す</span>
         </header>
         <ul>
           <?php foreach ($other_todos as $todo) : ?>
