@@ -51,7 +51,7 @@ input[type="checkbox"] {
 
 .delete,
 .purge {
-  color: #ccc;
+  color: green;
   cursor: pointer;
   font-size: 14px;
   margin-left: auto;
@@ -72,8 +72,9 @@ input[type="checkbox"] {
 }
 
 .seven_Todos,.seven_Todos>div{
-border: 1px solid #999;
+border: 1px solid green;
 padding: 10px;
+background-color: rgb(127, 255, 138);
 }
 
 .go_chatRoom{

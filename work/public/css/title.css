@@ -1,0 +1,14 @@
+.title{
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 120px;
+  color:red;
+  background-color: aquamarine;
+}
+
+.go_todos{
+  text-align: center;
+  height: 70;
+  width: 140;
+}
