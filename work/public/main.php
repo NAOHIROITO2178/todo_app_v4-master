@@ -25,7 +25,7 @@ $other_todos = $todo->getAll("other");
 
 <head>
   <meta charset="utf-8">
-  <title>My Todos</title>
+  <title>私のやることリスト</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <div class = "blur">
@@ -179,7 +179,7 @@ $other_todos = $todo->getAll("other");
     </div>
   </div>
   <form id = "add">
-    <input type="text" name="title" placeholder="ここに入力してください">
+    <input type="text" name="title" placeholder="ここに入力してください,期日がある場合は、「7/8 19:00~」のように日時も一緒に入力しましょう" >
     <label>
       <input type="radio" name="category" value="study">勉強
     </label>
@@ -211,9 +211,9 @@ $other_todos = $todo->getAll("other");
 </body>
 <br>
 <div class = "go_chat">
-<form action="http://localhost:8573">
+<a href="http://localhost:8573" target= "_blank">
   <button>困ったことがあったらこちらへどうぞ！</button>
-</form> 
+</a> 
 </div>
 <a href = "index.html" class = "End" id = "owari">＜＜＜終了する</a>
 <script>
