@@ -229,8 +229,6 @@ document.getElementById('owari').addEventListener('click', BackTitle);
   <br>
   <br>
   <br>
-  <br>
-  <br>
   <span id="ShowNowTime"></span>
 
   <script type="text/javascript">
