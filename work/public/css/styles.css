@@ -31,6 +31,8 @@ input[type="text"] {
 
 label{
   font-weight: bold;
+  background-color: aqua;
+  color:blue;
 }
 
 ul {
