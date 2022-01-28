@@ -179,7 +179,7 @@ $other_todos = $todo->getAll("other");
     </div>
   </div>
   <form id = "add">
-    <input type="text" name="title" placeholder="ここに入力してください,期日がある場合は、「7/8 19:00~」のように日時も一緒に入力しましょう" >
+    <input type="text" name="title" placeholder="ここに入力してください。期日がある場合は、「7/8 19:30~」のように日時も一緒に入力しましょう" >
     <label>
       <input type="radio" name="category" value="study">勉強
     </label>

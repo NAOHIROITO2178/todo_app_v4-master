@@ -124,3 +124,7 @@ background-color: rgb(127, 255, 138);
 .End{
   font-weight: bold;
 }
+
+button{
+  margin-top: 60px;
+}
