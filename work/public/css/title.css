@@ -39,3 +39,14 @@ body:before{
   bottom: -5px;
   z-index: -1;
 }
+
+.go_service{
+  font-weight: bold;
+  font-size: 20px;
+  color:green;
+  background-color: yellowgreen;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
