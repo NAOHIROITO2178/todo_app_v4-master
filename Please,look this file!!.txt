@@ -1,0 +1,16 @@
+これはLaravel＿chat_roomのリポジトリに繋がってるリポジトリです！
+
+このコードを探していただけると幸いです！
+
+このリポジトリ（http://localhost:8562)
+<div class = "go_chat">
+<a href="http://localhost:8573">
+  <button>困ったことがあったらこちらへどうぞ！</button>
+</a> 
+</div>
+          ↓      ↑
+Laravel＿chat_room（http://localhost:8573)
+<div class = "back_todo">
+    <a href = "http://localhost:8562/main.php?">
+        ＜＜＜Todoリストに戻る
+    </a>
